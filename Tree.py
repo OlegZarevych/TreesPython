@@ -47,4 +47,10 @@ class Tree:
   def add(self, data):
     self.root.add(data)
 
+  def delete(self, data):
+    self.root = self.root.delete(data)
+
+  def rebalance(self):
+    self.root.rebalance()
+    self.root = self.root.fix_imbalance_if_exist()
 
